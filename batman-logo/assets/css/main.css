@@ -10,5 +10,12 @@
     height: 300px;
     width: 465px;
     border-radius: 100%;
+    padding: 17px;
     border: 20px solid #000000;
+}
+.batman{
+    background: #000000;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
 }
