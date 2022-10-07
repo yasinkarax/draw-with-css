@@ -1,5 +1,8 @@
+:root{
+    --batman: #ffea00;
+}
 .background{
-    background-color: #ffea00;
+    background-color: var(--batman);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,4 +21,120 @@
     height: 100%;
     width: 100%;
     border-radius: 100%;
+    position: relative;
 }
+.batman *{
+    background-color: var(--batman);
+}
+[class*=arm]{
+    width: 84px;
+    height: 84px;
+    border-radius: 100%;
+    position: absolute;
+}
+.arm-left{
+    left: 21%;
+}
+.left-ear{
+    right: 0;
+    position: absolute;
+    height: 42px;
+    width: 35%;
+}
+
+.arm-right{
+    right: 21%;
+}
+
+.right-ear{
+    left: 0;
+    position: absolute;
+    height: 42px;
+    width: 35%;
+}
+.head{
+    width: 25px;
+    height: 26px;
+    /* position: absolute; */
+    position: relative;
+    margin: 0 auto;
+}
+[class *= head-]{
+    height: 16px;
+    width: 30px;
+    position: absolute;
+}
+.head-right{
+    right: -17px;
+    transform: rotate(303deg);
+    top: 1px;
+}
+
+.head-left{
+    left: -17px;
+    transform: rotate(236deg);
+    top: 1px;
+}
+
+[class*=circle]{
+    position: absolute;
+}
+[class*=circle-1]{
+    width: 74px;
+    height: 73px;
+    left: 52px;
+    top: 134px;
+    border-radius: 100%;
+}
+.right-circle-1{
+    right: 52px;
+    left: auto;
+}
+.right-circle-1 div{
+    height: 30px;
+    width: 47px;
+    right: 34px;
+    bottom: -13px;
+    position: absolute;
+}
+.left-circle-1 div{
+    height: 30px;
+    width: 47px;
+    left: 34px;
+    bottom: -13px;
+    position: absolute;
+}
+[class*=circle-2]{
+    width: 70px;
+    height: 106px;
+    top: 133px;
+}
+.left-circle-2{
+    transform: rotate(342deg);
+    left: 111px;
+    
+    border-radius: 100% 100%  0px 100%;
+}
+.right-circle-2{
+    right: 113px;
+    
+    border-radius: 100% 100% 100% 0px;
+    transform: rotate(-342deg);
+}
+
+/* [class *= end]{
+    position: absolute;
+    width: 50px;
+    height: 75px;
+    bottom: -6px;
+    border-radius: 100% 100% 2px 2px;
+    background-color: red;
+}
+.left-end{
+    left: 138px;
+    transform: rotate(347deg);
+}
+.right-end{
+    right: 138px;
+    transform: rotate(-347deg);;
+} */
